@@ -1,0 +1,22 @@
+{
+  "name": "privatemsgapp",
+  "version": "1.0.0",
+  "description": "Private Messaging Application Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dyrk33/PrivateMsgApp.git"
+  },
+  "author": "Alex Waibel, Jacob Shoaf, Derek Boyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dyrk33/PrivateMsgApp/issues"
+  },
+  "homepage": "https://github.com/Dyrk33/PrivateMsgApp#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
