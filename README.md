@@ -14,7 +14,7 @@ To start the app run the following command:
 ```
 npm start
 ```
-To change the logging level simply delete  ```set DEBUG=*``` from the line "start": "set DEBUG=* & nodemon ./source/bin/www", in the package.json
+To lessen the logging level simply delete  ```set DEBUG=*``` from the line "start": "set DEBUG=* & nodemon ./source/bin/www", in the package.json
 
 
 ## Tools
