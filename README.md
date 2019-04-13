@@ -1,13 +1,13 @@
 # PrivateMsgApp
 Private messaging app for n-1 messaging. Use case for is "Brother-At-Large" in some robert rules of order denominations.
 
-###Installation
+##Installation
 
 Be sure to run ```npm install``` at the root
 
 
 
-###Starting the App
+##Starting the App
 
 To start the app run the following command:
 
