@@ -1,23 +1,23 @@
 {
-  "name": "privatemsgapp",
+  "name": "lara",
   "version": "0.0.1",
   "private": true,
-  "description": "Private Messaging Application Backend",
+  "description": "Lara Private Messaging Application Backend",
   "scripts": {
-    "lint": "eslint \"source/**\"",
+    "lint": "eslint \"source/\"",
     "start": "set DEBUG=* & nodemon ./source/bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dyrk33/PrivateMsgApp.git"
+    "url": "git+https://github.com/larafoundingteam/Lara.git"
   },
   "author": "Alex Waibel, Jacob Shoaf, Derek Boyer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Dyrk33/PrivateMsgApp/issues"
+    "url": "https://github.com/larafoundingteam/Lara/issues"
   },
-  "homepage": "https://github.com/Dyrk33/PrivateMsgApp#readme",
+  "homepage": "https://github.com/larafoundingteam/Lara#readme",
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "debug": "^2.6.9",
