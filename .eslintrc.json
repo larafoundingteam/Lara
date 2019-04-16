@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "node": true
   },
   "extends": ["airbnb", "prettier"],
   "plugins": ["prettier"],
@@ -14,6 +15,15 @@
   },
   "rules": {
     "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
-    "prettier/prettier": ["error"]
+    "prettier/prettier": ["error"],
+    "arrow-parens": "off",
+    "object-curly-newline": "off",
+    "no-mixed-operators": "off",
+    "function-paren-newline": "off",
+    "no-plusplus": "off",
+    "space-before-function-paren": 0,
+    "max-len": ["error", 100, 2, { "ignoreUrls": true }],
+    "no-console": "error",
+    "no-alert": "error"
   }
 }
