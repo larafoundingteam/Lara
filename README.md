@@ -9,7 +9,9 @@ Be sure to run ```npm install``` at the root
 
 ### Starting the App
 
-To start the app run the following command:
+
+To start the app run the following command: 
+
 
 ```
 npm start
