@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint \"source/\"",
     "start": "set DEBUG=* & nodemon ./source/bin/www",
-    "test": "eslint \"source/\""
+    "test": "eslint \"source/\" && prettier-check source/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,6 @@
     "express": "^4.16.4",
     "http-errors": "^1.6.2",
     "morgan": "^1.9.0",
-    "nodemon": "^1.18.11",
     "pug": "^2.0.3"
   },
   "devDependencies": {
@@ -37,7 +36,9 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "prettier": "^1.17.0"
+    "nodemon": "^1.18.11",
+    "prettier": "^1.17.0",
+    "prettier-check": "^2.0.0"
   },
   "nodemonConfig": {
     "restartable": "rs",
