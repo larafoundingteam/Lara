@@ -13,7 +13,7 @@ const app = require('../app');
  */
 
 const port = normalizePort(process.env.PORT || '3000');
-console.log(`listeniing on port${port}`);
+console.log(`listeniing on port ${port}`);
 app.set('port', port);
 
 /**
