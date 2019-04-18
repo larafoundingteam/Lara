@@ -1,5 +1,10 @@
-#version
-FROM node:8
-#default port of project:q
-EXPOSE 4000
+FROM node:current-alpine
 
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "start"]

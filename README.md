@@ -26,3 +26,9 @@ The linter looks recursively through all of the files in the source folder
 To run the linter run the following command:
 
 ```npm run lint```
+
+
+## Running with Docker
+## Install latest version of docker ce and docker-compose per your OS
+To run the docker image run:
+```docker-compose up```

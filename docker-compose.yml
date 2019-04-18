@@ -1,13 +1,12 @@
-version: '2'
-services: 
-  node:
-    image: "node:8"
-    user: "node"
-    working_dir: /home/node/app
-    environment:
-      - NODE_ENV=production
+version: '3'
+
+services:
+  test-service:
+    build: .
     volumes:
-      - ./:/home/node/app
-    expose:
-      - "4000"
-    command: "npm start"
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 4000:4000
+      - 9229:9229
+    command: npm start
