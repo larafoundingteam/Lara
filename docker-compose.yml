@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  test-service:
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 4000:4000
+      #Debug port- 9229:9229
+    command: npm start
+    
