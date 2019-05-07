@@ -4,31 +4,59 @@
 Private messaging app for n-1 messaging. Use case for is "Brother-At-Large" in some robert rules of order denominations.
 
 ## Installation
+Run ```npm install``` at the root
 
-Be sure to run ```npm install``` at the root
-
-
-
-### Starting the App
-
-
+##### Starting the App
 To start the app run the following command: 
+```npm start```
 
+To lessen the logging level simply delete  ```set DEBUG=*``` in package.json from the line:
+```"start": "set DEBUG=* & nodemon ./source/bin/www"```
 
-```
-npm start
-```
-To lessen the logging level simply delete  ```set DEBUG=*``` from the line "start": "set DEBUG=* & nodemon ./source/bin/www", in the package.json
+##### Starting the App with Docker
+To start the app in a docker container
+Install latest version of [docker] and [docker-compose]
 
+To run the docker image:
+```docker-compose up```
 
-## Tools
-The linter looks recursively through all of the files in the source folder
-To run the linter run the following command:
+## Testing
+To run tests
+```npm run tests```
 
+#### Testing Tools
+- [Mocha] (Testing Framework)
+- [Supertest] (HTTP Integration Testing)
+- [Sinon] (Mock and Stub Library)
+- [Chai] (Assertion Library)
+
+## Dev Tools
+
+##### EsLint
+[EsLint] works recursively through all of the files in the source folder enforcing Airbnb linting rules
+
+##### Prettier
+[Prettier] enforces code formatting 
+
+To lint and run Prettier:
 ```npm run lint```
 
+##### Nodemon
+[Nodemon] is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected. Nodemon is starts with the start of the app
 
-## Running with Docker
-## Install latest version of docker ce and docker-compose per your OS
-To run the docker image run:
-```docker-compose up```
+
+
+[//]: #
+
+[docker]:  <https://docs.docker.com/install/>
+[docker-compose]: <https://docs.docker.com/compose/install/>
+[EsLint]: <https://eslint.org/>
+[Prettier]: <https://prettier.io/>
+[Mocha]: <https://mochajs.org/>
+[Supertest]: <https://www.npmjs.com/package/supertest>
+[Sinon]: <https://www.npmjs.com/package/sinon>
+[Chai]: <https://www.npmjs.com/package/chai>
+[Nodemon]: <https://www.npmjs.com/package/nodemon>
+
+    
+    
