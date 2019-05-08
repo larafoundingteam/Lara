@@ -6,28 +6,36 @@ Private messaging app for n-1 messaging. Use case for is "Brother-At-Large" in s
 
 1. [Installation](#Installation)
 2. [Testing](#Testing)
-3. [Development Tools](#Dev-Tools)
+3. [Development Tools](#Development-Tools)
 
 ## Installation
 Run ```npm install``` at the root
 
 ##### Starting the App
 To start the app run the following command: 
-```npm start```
+```
+npm start
+```
 
 To lessen the logging level simply delete  ```set DEBUG=*``` in package.json from the line:
-```"start": "set DEBUG=* & nodemon ./source/bin/www"```
+```
+"start": "set DEBUG=* & nodemon ./source/bin/www"
+```
 
 ##### Starting the App with Docker
 To start the app in a docker container
 Install latest version of [docker] and [docker-compose]
 
 To run the docker image:
-```docker-compose up```
+```
+docker-compose up
+```
 
 ## Testing
 To run tests:
-```npm run tests```
+```
+npm run tests
+```
 
 #### Testing Tools
 - [Mocha] (Test Runner Framework)
@@ -45,10 +53,15 @@ To run tests:
 [Prettier] enforces code formatting 
 
 To lint and run Prettier:
-```npm run lint```
+```
+npm run lint
+```
 
 ##### Nodemon
 [Nodemon] is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected. Nodemon automatically launches with the start of the app
+
+
+
 
 
 
