@@ -18,9 +18,8 @@ npm start
 ```
 
 To lessen the logging level simply delete  ```set DEBUG=*``` in package.json from the line:
-```
-"start": "set DEBUG=* & nodemon ./source/bin/www"
-```
+
+```"start": "set DEBUG=* & nodemon ./source/bin/www"```
 
 ##### Starting the App with Docker
 To start the app in a docker container
