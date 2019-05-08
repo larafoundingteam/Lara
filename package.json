@@ -4,8 +4,9 @@
   "private": true,
   "description": "Lara Private Messaging Application Backend",
   "scripts": {
-    "lint": "eslint \"source/\" && prettier-check source/**/*.js",
-    "start": "set DEBUG=* & nodemon ./source/bin/www",
+    "lint": "eslint \"source/\"",
+    "prettier": "prettier-check source/**/*.js",
+    "start": " nodemon ./source/bin/www",
     "test": "eslint \"source/\" && prettier-check source/**/*.js"
   },
   "repository": {
