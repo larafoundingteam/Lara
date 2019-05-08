@@ -55,6 +55,10 @@ To lint:
 ```
 npm run lint
 ```
+To let EsLint try to autofix errors:
+```
+npm run lint -- --fix
+```
 
 ##### Prettier
 [Prettier] enforces code formatting 
