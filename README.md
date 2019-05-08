@@ -9,7 +9,10 @@ Private messaging app for n-1 messaging. Use case for is "Brother-At-Large" in s
 3. [Development Tools](#Development-Tools)
 
 ## Installation
-Run ```npm install``` at the root
+At the root of the project run 
+```
+npm install
+```
 
 ##### Starting the App
 To start the app run the following command: 
