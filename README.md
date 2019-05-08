@@ -51,16 +51,28 @@ npm run tests
 ##### EsLint
 [EsLint] works recursively through all of the files in the source folder enforcing Airbnb linting rules
 
-##### Prettier
-[Prettier] enforces code formatting 
-
-To lint and run Prettier:
+To lint:
 ```
 npm run lint
 ```
 
+##### Prettier
+[Prettier] enforces code formatting 
+
+To run Prettier:
+```
+npm run prettier
+```
+
 ##### Nodemon
 [Nodemon] is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected. Nodemon automatically launches with the start of the app
+
+##### Ngrok
+[Ngrok] is a tool you should download. Ngrok exposes localhost ports to an internet domain. Ngrok is useful for integrating/testing local applications with cloud applications. For example to expose localhost port 4000 to the internet run the command:
+```
+ngrok http 4000
+```
+
 
 
 
@@ -79,6 +91,7 @@ npm run lint
 [Chai]: <https://www.npmjs.com/package/chai>
 [Nodemon]: <https://www.npmjs.com/package/nodemon>
 [Istanbul NYC]: <https://www.npmjs.com/package/nyc>
+[ngrok]: <https://ngrok.com/download>
 
     
     
