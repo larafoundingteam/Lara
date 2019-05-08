@@ -1,4 +1,4 @@
-# PrivateMsgApp
+# Lara Messaging
 [![Build Status](https://travis-ci.org/larafoundingteam/Lara.svg?branch=dev)](https://travis-ci.org/larafoundingteam/Lara)
 
 Private messaging app for n-1 messaging. Use case for is "Brother-At-Large" in some robert rules of order denominations.
