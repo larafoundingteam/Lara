@@ -1,26 +1,21 @@
 const express = require('express');
+const auth = require('../authenticator');
 
 const router = express.Router();
 
-function isAuthorizedUser(user) {
-  if (user.toLowerCase().trim() === 'admin') {
-    return true;
-  }
-  return false;
-}
-
-/* GET users listing. */
+/* Post users listing. */
 router.post('/', (req, res, next) => {
+  res.setHeader('Content-Type', 'application/json');
   if (req.body.username === undefined) {
     res.statusMessage = 'Username must be specified';
     res.status(400).end();
-  }
-  if (isAuthorizedUser(req.body.username)) {
-    res.send('Authorized');
+  } else if (auth.isAuthorizedUser(req.body.username)) {
+    res.send({
+      status: 'Authorized',
+    });
   } else {
-    res.statusMessage =
-      'Unauthorized you are not the user we are looking for... Try another username';
-    res.status(400).end();
+    res.statusMessage = 'Unathorized user';
+    res.status(403).end();
   }
 });
 
