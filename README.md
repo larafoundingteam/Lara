@@ -21,14 +21,15 @@ To run the docker image:
 ```docker-compose up```
 
 ## Testing
-To run tests
+To run tests:
 ```npm run tests```
 
 #### Testing Tools
-- [Mocha] (Testing Framework)
+- [Mocha] (Test Runner Framework)
 - [Supertest] (HTTP Integration Testing)
 - [Sinon] (Mock and Stub Library)
 - [Chai] (Assertion Library)
+- [Istanbul NYC] (Code Coverage Tool)
 
 ## Dev Tools
 
@@ -61,6 +62,7 @@ To lint and run Prettier:
 [Sinon]: <https://www.npmjs.com/package/sinon>
 [Chai]: <https://www.npmjs.com/package/chai>
 [Nodemon]: <https://www.npmjs.com/package/nodemon>
+[Istanbul NYC]: <https://www.npmjs.com/package/nyc>
 
     
     
