@@ -7,7 +7,8 @@
     "lint": "eslint \"source/\"",
     "prettier": "prettier-check source/**/*.js",
     "start": " nodemon ./source/bin/www",
-    "test": "mocha 'source/test/**/*' && npm run lint && npm run prettier"
+    "test": "mocha 'source/test/**/*' && npm run lint && npm run prettier",
+    "test-only": "mocha 'source/test/**/*'"
   },
   "repository": {
     "type": "git",

@@ -34,9 +34,15 @@ docker-compose up
 ```
 
 ## Testing
-To run tests:
+
+To run tests, linter, and prettier:
 ```
-npm run tests
+npm run test
+```
+
+To only run test suite:
+```
+npm run test-only
 ```
 
 #### Testing Tools
@@ -44,7 +50,7 @@ npm run tests
 - [Supertest] (HTTP Integration Testing)
 - [Sinon] (Mock and Stub Library)
 - [Chai] (Assertion Library)
-- [Istanbul NYC] (Code Coverage Tool)
+- [Istanbul-NYC] (Code Coverage Tool)
 
 ## Development Tools
 
@@ -94,7 +100,7 @@ ngrok http 4000
 [Sinon]: <https://www.npmjs.com/package/sinon>
 [Chai]: <https://www.npmjs.com/package/chai>
 [Nodemon]: <https://www.npmjs.com/package/nodemon>
-[Istanbul NYC]: <https://www.npmjs.com/package/nyc>
+[Istanbul-NYC]: <https://www.npmjs.com/package/nyc>
 [ngrok]: <https://ngrok.com/download>
 
     
