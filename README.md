@@ -20,7 +20,7 @@ To start the app run the following command:
 npm start
 ```
 
-To lessen the logging level simply delete  ```set DEBUG=*``` in package.json from the line:
+The application is in debug mode if   ```set DEBUG=*``` is found in package.json on the line:
 
 ```"start": "set DEBUG=* & nodemon ./source/bin/www"```
 
