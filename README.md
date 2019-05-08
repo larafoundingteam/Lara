@@ -2,6 +2,11 @@
 [![Build Status](https://travis-ci.org/larafoundingteam/Lara.svg?branch=dev)](https://travis-ci.org/larafoundingteam/Lara)
 
 Private messaging app for n-1 messaging. Use case for is "Brother-At-Large" in some robert rules of order denominations.
+# Table of Contents
+
+1. [Installation](#Installation)
+2. [Testing](#Testing)
+3. [Development Tools](#Dev-Tools)
 
 ## Installation
 Run ```npm install``` at the root
@@ -31,7 +36,7 @@ To run tests:
 - [Chai] (Assertion Library)
 - [Istanbul NYC] (Code Coverage Tool)
 
-## Dev Tools
+## Development Tools
 
 ##### EsLint
 [EsLint] works recursively through all of the files in the source folder enforcing Airbnb linting rules
@@ -44,10 +49,6 @@ To lint and run Prettier:
 
 ##### Nodemon
 [Nodemon] is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected. Nodemon automatically launches with the start of the app
-
-
-
-
 
 
 
