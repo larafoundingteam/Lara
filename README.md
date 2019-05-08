@@ -42,7 +42,11 @@ To lint and run Prettier:
 ```npm run lint```
 
 ##### Nodemon
-[Nodemon] is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected. Nodemon is starts with the start of the app
+[Nodemon] is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected. Nodemon automatically launches with the start of the app
+
+
+
+
 
 
 
