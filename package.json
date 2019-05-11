@@ -5,8 +5,10 @@
   "description": "Lara Private Messaging Application Backend",
   "scripts": {
     "lint": "eslint \"source/\"",
-    "start": "set DEBUG=* & nodemon ./source/bin/www",
-    "test": "eslint \"source/\" && prettier-check source/**/*.js"
+    "prettier": "prettier-check source/**/*.js",
+    "start": " nodemon ./source/bin/www",
+    "test": "mocha 'source/test/**/*' && npm run lint && npm run prettier",
+    "test-only": "mocha 'source/test/**/*'"
   },
   "repository": {
     "type": "git",
@@ -19,12 +21,15 @@
   },
   "homepage": "https://github.com/larafoundingteam/Lara#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
     "cookie-parser": "^1.4.3",
     "debug": "^2.6.9",
     "express": "^4.16.4",
     "http-errors": "^1.6.2",
     "morgan": "^1.9.0",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
     "acorn": "^6.1.1",
@@ -36,9 +41,12 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
+    "mocha": "^6.1.4",
     "nodemon": "^1.18.11",
+    "nyc": "^14.1.0",
     "prettier": "^1.17.0",
-    "prettier-check": "^2.0.0"
+    "prettier-check": "^2.0.0",
+    "sinon": "^7.3.2"
   },
   "nodemonConfig": {
     "restartable": "rs",
