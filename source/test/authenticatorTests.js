@@ -12,7 +12,7 @@ describe('Users Route Unit Tests', () => {
     });
 
     it('returns False for invalidUser', done => {
-      expect(user.isAuthorizedUser('UnknownUser')).to.be.equal(true);
+      expect(user.isAuthorizedUser('UnknownUser')).to.be.equal(false);
       done();
     });
   });

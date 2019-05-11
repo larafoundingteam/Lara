@@ -4,7 +4,7 @@ const auth = require('../authenticator');
 const router = express.Router();
 
 /* Post users listing. */
-router.post('/', (req, res, next), function() {
+router.post('/', (req, res, next) => {
   res.setHeader('Content-Type', 'application/json');
   if (req.body.username === undefined) {
     res.statusMessage = 'Username must be specified';
