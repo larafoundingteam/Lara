@@ -4,5 +4,20 @@ node_js:
 cache:
   directories:
     - 'node_modules'
+jobs:
+  include:
+    - stage: "Test"                
+      name: "Tests"            
+      script:
+        - npm run test
+    - script: 
+        - npm run coverage-report
+        - npm run coverage
+      name: "Code Coverage"
+    - script: 
+        - npm run lint
+        - npm run prettier
+      name: "Code Formatting"
+
 notifications:
   secure: 'L32GxzQA9Iko0UqSsmSqQdhlfD7nSV/nRJMyVRcb8vk4KNxcCAkG4z2Ky4Bf0PWxLgZ+BpAzhnp3N1c005xrpIPqfiKYyenJWM1fe4L6yCJbKOAY5axGqLCd5fVjn/t3yxUFavc5VEhciFqE52uKded+gIhs7gD85/uDjgvNx6tdzCmrFoqdxW1RdJ8yVCdnnJ+8k8fG6euKdabepz6QnEod0WVNELmTWGQBP4U9t7werXOvyo1X2N1ZoFpT/NquHo/fPqO2fl1XsiBDiJ9ZXX45jl9djvB1xJd/tIRekAJ7iwbTEucCeArCV0XsuqNkYDvMFjsykXDow7aEOhgEzQw6Gx7iVOYfmblXHVj7z/RrKhOz8mfWFbl8bzo9LIY8OLbJNWg1vvEeuuoVzICnrsWtB8j1FC6TyfpCYq83O+OPCoBrScx7fEJXjs6WrL2twuTc2J3YwGEsTh8pKPgrmeRREgw711xVqz/YMxWo2zsEz988YF3u0IYPw8N7rCV31np7CL2vIUpYdhbrvmmibaVaeJ8CBDK8ZJRc0+aGHS3XFwDLVzxREiaLOigDQ7xgB4wt+1FLag8MoaPdw118B35B8BQrT+jfvnLtinP1fNoH6FA6af3QG1MypRcU7XAG9a1STkbvP3sJ7/ExmPa38e/s31bBNVovDhcoQG15O2U='

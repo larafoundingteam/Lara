@@ -6,9 +6,12 @@
   "scripts": {
     "lint": "eslint \"source/\"",
     "prettier": "prettier-check source/**/*.js",
-    "start": " nodemon ./source/bin/www",
-    "test": "mocha 'source/test/**/*' && npm run lint && npm run prettier",
-    "test-only": "mocha 'source/test/**/*'"
+    "start": "./source/bin/www",
+    "dev-start": " nodemon ./source/bin/www",
+    "test": "mocha 'source/test/**/*'",
+    "pipeline-test": "npm run test && npm run lint && npm run prettier && npm run coverage",
+    "coverage":"nyc check-coverage",
+    "coverage-report":"nyc npm run test"
   },
   "repository": {
     "type": "git",
@@ -43,20 +46,26 @@
     "eslint-plugin-react": "^7.12.4",
     "mocha": "^6.1.4",
     "nodemon": "^1.18.11",
-    "nyc": "^14.1.0",
+    "nyc": "^14.1.1",
     "prettier": "^1.17.0",
     "prettier-check": "^2.0.0",
     "sinon": "^7.3.2"
+  },
+  "env": {
+    "NODE_ENV": "development",
+    "PORT": 4000
+  },
+  "nyc": {
+    "branches": 50,
+    "lines": 50,
+    "functions": 50,
+    "statements": 50
   },
   "nodemonConfig": {
     "restartable": "rs",
     "ignore": [
       "node_modules/**/node_modules"
     ],
-    "delay": "2500",
-    "env": {
-      "NODE_ENV": "development",
-      "PORT": 4000
-    }
+    "delay": "2500"
   }
 }

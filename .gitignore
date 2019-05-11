@@ -26,3 +26,8 @@ coverage
 # Benchmarking
 benchmarks/graphs
 
+#NYC Code-Coverage Reports
+.nyc_output
+coverage
+*.lcov
+
