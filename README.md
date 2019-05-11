@@ -84,6 +84,7 @@ npm run prettier
 
 ##### Code Coverage
 [Istanbul-NYC] Is a command line code coverage tool
+Config and the code coverage threshold for nyc is found in package.json in the 'nyc' tag
 
 To check that coverage matches the code coverage threshold and generates a report:
 ```
