@@ -9,9 +9,8 @@
     "start": "./source/bin/www",
     "dev-start": " nodemon ./source/bin/www",
     "test": "mocha 'source/test/**/*'",
-    "pipeline-test": "npm run test && npm run lint && npm run prettier && npm run coverage",
-    "coverage":"nyc check-coverage",
-    "coverage-report":"nyc npm run test"
+    "pipeline-test": "npm run coverage && npm run lint && npm run prettier && npm run test",
+    "coverage": "nyc npm run test && nyc check-coverage"
   },
   "repository": {
     "type": "git",

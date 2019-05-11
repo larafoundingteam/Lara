@@ -36,14 +36,9 @@ docker-compose up
 
 ## Testing
 
-To run tests, linter, and prettier:
+To run the test suite:
 ```
 npm run test
-```
-
-To only run test suite:
-```
-npm run test-only
 ```
 
 #### Testing Tools
@@ -59,6 +54,11 @@ Travis checks that:
     - all tests cases passed
     - code is formatted to eslint and prettier guidelines
     - code coverage meets the 50% standard
+
+To see if the source code will pass the travis checks offline run:
+```
+npm run pipeline-test
+```
 
 ## Development Tools
 
@@ -85,12 +85,7 @@ npm run prettier
 ##### Code Coverage
 [Istanbul-NYC] Is a command line code coverage tool
 
-To generate a code coverage report:
-```
-npm run coverage-report
-```
-
-To check that coverage matches the mandated 50% code coverage:
+To check that coverage matches the code coverage threshold and generates a report:
 ```
 npm run coverage
 ```
