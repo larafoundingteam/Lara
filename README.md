@@ -6,7 +6,7 @@ Private messaging app for n-1 messaging. Use case for is "Brother-At-Large" in s
 
 1. [Installation](#Installation)
 2. [Testing](#Testing)
-3. [CI/CD](#CI/CD)
+3. [CI/CD](#cicd)
 4. [Development Tools](#Development-Tools)
 
 ## Installation
