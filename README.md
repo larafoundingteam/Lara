@@ -111,6 +111,7 @@ There are two types of actors in LaraMessaging:
 - Anonymous User: Anonymous users are able to anonymously send maessages to the account holder
 
 For MVP:
+
     - Messages cannot be deleted from prompt by user but may be automatically deleted by the system after a designated length of time. 
     - Anonymous Users once leaving the chat cannot rejoin a chat but must create a new one
     - Anonymous Users do not need to create accounts
