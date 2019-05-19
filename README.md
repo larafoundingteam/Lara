@@ -117,7 +117,7 @@ For MVP:
 - Anonymous Users do not need to create accounts
     
 
-#### 1 Anonymous User
+#### Simple Anonymous User Interaction
 
 1. Account Holder clicks register an account
 2. Enters email and necessary signup information
@@ -132,7 +132,7 @@ For MVP:
 11. Account Holder and Anonymous User can send messages to each other
 12. Anonymous User closes the browser or otherwise ends the chat the Account Holder recieves a message in the conversation box saying the anonymous user has left
 
-#### Multiple Anonymous User
+#### Multiple Anonymous User Interactions
 
 1. Account Holder clicks register an account
 2. Enters email and necessary signup information
