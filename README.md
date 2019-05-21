@@ -83,6 +83,67 @@ npm run prettier
 ngrok http 4000
 ```
 
+## Architecture
+
+#### Frontend
+
+React Application that when loaded uses Socket.io to create a socket connection with the backend API to recieve events from the API. The React Application will be hosted on a seperate EC2 instance. 
+
+#### API
+
+The backend Api do little computation but mainly acts as a carrier between the frontend and storage.
+
+#### Storage
+
+Dynamo DB Tables:
+
+Dynamo Db table can only be queried on their primary key and is ordered by their sort key. So an example query from the messages table could be get all items matching AccountHolderId-AnonymousUserId = 1234-4 and CreatedAt > 23434543 epoch seconds.
+
+Active Users table:
+
+| User Id | Active | Number of Anonymous Users | ... |
+An active sessions table will keep track of each user and whether or not they are active. In the case of the account holder their will be an additional attribute stating the number of anonymous users. For all users in the active sessions table any additional needed attributes such as destination ipaddress or port numbers can go here. The AnonymousUserID is the number of anonymous user that has messaged the Account Holder, if the anonymous user is the 4th person to send a message then the AnonymousUserId will be 4. 
+
+Messages Table:
+
+| AccountHolderId-AnonymousUserId | CreatedAt | Message | PostedBy | ToBeDeletedAt | 
+A messages table will keep track of all of the messages. The messages table is partitioned by a primary key consisting of the AccountHolder Id concatenated with the anonymous user id. This concatenation creates a channel-Id. The messages table will have a sort key on time created and a time to delete attribute for automatic deletion of messages after a certain period. A PostedBy attribute will be set to AccountHolder or Anonymous user to show who sent the message.
+
+
+Room Codes Table 
+
+| Room Code | AccountHolderId |
+A RoomCode table will map room codes to AccountHolders.
+
+
+#### Possible events effects on storage:
+
+Account Sign up:
+An Account Holder signs up and is assigned a room code. The api generates a room code and adds it with the Acount Holder Id in the RoomCode table. The AccountHolder is added to the active users table the number of anonymous users is set to 0.
+
+Anonymous message:
+An anonymous user enters the room code and sends a message. The api recieves the message with the room code. Looks in the RoomCode table to get the AccountHolderId. Next the api checks the activeSessions table and increment the number anonymous users for the account holder and adds a row of the AnonymousUsers' Id and marks it as active. Then adds the message to the messages table with the primary key being the AccountHolderID-AnonymousUserID. Then the message is delivered to the AccountHolder if the AccountHolder is online. The frontend recieves the AccountHolderID-AnonymousUserID
+
+Account Holder reply:
+When the Account Holder replies as long as the anonymous user is active the message just needs to be added to the messages table with the key AccountHolderID-AnonymousUserID and sent to the anonymous user.
+
+AnonymousUser reply:
+When the anonymous user responds , the anonymous user now uses the AccountUserId-AnonymousUserId in header, the message is added to the messages table with the key AccountHolderID-AnonymousUserID and if the Account Holder is online the message is sent to the Account Holder. 
+
+AnonymousUser exits:
+When the anonymous user exits the active users table is changed to mark the user inactive and a user has left the chat message is added to the messages table and is sent to the AccountHolder.
+
+Account Holder exits:
+When the Account Holder signs out or exits. The Account Holder is marked inacctive in the active sessions table. 
+
+Account Holder signs in:
+When an account Holder signs in the active sessions table is checked to get all of the AccountUserID-AnonymousUserID pairs and marks the AccountHolder active. Then the messages table is read for each AccountUserID-AnonymousUserID and the message history is retrieved to be displayed. 
+
+#### Storage Issues TBD:
+- What to use for AccountHolderId
+- When to delete users fromt the active users table
+- No issues of security are adddressed and should be addressed in a future issue.
+
 
 
 
